@@ -1,4 +1,8 @@
 node {
+	
+    tools {
+        maven 'maven'
+    }
      stage('clone'){
 	     git 'https://github.com/balagangadharbestha/maven-web-application.git'
          }
