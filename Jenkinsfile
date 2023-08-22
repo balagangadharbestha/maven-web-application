@@ -5,7 +5,7 @@ pipeline {
     }
     stages {
         // ...
-    }
+    
     stage('clone'){
 	     git 'https://github.com/balagangadharbestha/maven-web-application.git'
          }
@@ -27,5 +27,6 @@ pipeline {
 // 	stage('Maven deploy') {
 //       sh 'mvn deploy'
 // 	}
+}
 }
 
