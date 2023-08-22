@@ -1,9 +1,12 @@
-node {
-	
+pipeline {
+    agent any
     tools {
         maven 'maven'
     }
-     stage('clone'){
+    stages {
+        // ...
+    }
+    stage('clone'){
 	     git 'https://github.com/balagangadharbestha/maven-web-application.git'
          }
     stage('Maven clean') {
