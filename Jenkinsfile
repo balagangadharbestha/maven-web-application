@@ -1,32 +1,30 @@
 pipeline {
     agent any
     tools {
-        maven 'maven3.9.2'
+        maven "maven3.9.2"
     }
     stages {
         // ...
-    
-    stage('clone'){
-	     git 'https://github.com/balagangadharbestha/maven-web-application.git'
+    }
+    stage("clone"){
+	     git "https://github.com/balagangadharbestha/maven-web-application.git"
          }
-    stage('Maven clean') {
-      sh 'mvn clean' 
+    stage("Maven clean") {
+      sh "mvn clean" 
     }
-    stage('Maven validate') {
-      sh 'mvn validate'
+    stage("Maven validate") {
+      sh "mvn validate"
     }
-    stage('Maven compile') {
-      sh 'mvn compile' 
+    stage("Maven compile") {
+      sh "mvn compile" 
     }
-    stage('Maven test') {
-      sh 'mvn test'
+    stage("Maven test") {
+      sh "mvn test"
     }
-    stage('Maven package') {
-      sh 'mvn package'
+    stage("Maven package") {
+      sh "mvn package"
 	}
-// 	stage('Maven deploy') {
-//       sh 'mvn deploy'
+// 	stage("Maven deploy") {
+//       sh "mvn deploy"
 // 	}
 }
-}
-
